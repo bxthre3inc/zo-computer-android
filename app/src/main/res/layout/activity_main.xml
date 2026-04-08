@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/swiperefresh"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0D0D0D">
+    <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ProgressBar android:id="@+id/progressBar" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="4dp" android:layout_gravity="top" android:visibility="gone"/>
+    <LinearLayout android:id="@+id/sysInfoPanel" android:orientation="vertical" android:padding="16dp" android:background="#1A1A2E" android:visibility="gone">
+        <TextView android:id="@+id/sysInfoTitle" android:text="System" android:textSize="20sp" android:textColor="#FFFFFF" android:textStyle="bold"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp">
+            <TextView android:id="@+id/sysInfoText" android:textColor="#B0B0B0" android:textSize="13sp" android:fontFamily="monospace"/>
+        </ScrollView>
+        <Button android:id="@+id/closeSysInfo" android:text="Close" android:layout_marginTop="8dp" android:backgroundTint="#7B2FBE" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/navBar" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="56dp" android:layout_gravity="bottom" android:background="#1A1A2E" android:gravity="center">
+        <Button android:id="@+id/btnDash" android:text="Dashboard" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:backgroundTint="#16213E" android:textColor="#FFFFFF" android:textSize="11sp"/>
+        <Button android:id="@+id/btnWeb" android:text="Web" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:backgroundTint="#16213E" android:textColor="#FFFFFF" android:textSize="11sp"/>
+        <Button android:id="@+id/btnSys" android:text="System" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:backgroundTint="#16213E" android:textColor="#FFFFFF" android:textSize="11sp"/>
+    </LinearLayout>
+</FrameLayout>

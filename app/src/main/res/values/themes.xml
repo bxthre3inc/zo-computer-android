@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.ZoComputer" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@android:color/black</item>
-        <item name="android:navigationBarColor">@android:color/black</item>
-        <item name="android:windowBackground">@android:color/black</item>
+    <style name="AppTheme">
+        <item name="colorPrimary">#7B2FBE</item>
+        <item name="colorPrimaryDark">#4A0080</item>
+        <item name="colorAccent">#00E676</item>
+        <item name="android:windowBackground">#0D0D0D</item>
+        <item name="android:statusBarColor">#0D0D0D</item>
+        <item name="android:navigationBarColor">#1A1A2E</item>
     </style>
 </resources>
